@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workspace MCP Servers</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+    line-height: 1.65; color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #141414; }
+    a { color: #8ab4f8; }
+    code { background: #262626; }
+  }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin-bottom: 0.35rem; }
+  .sub { color: #666; margin-top: 0; }
+  @media (prefers-color-scheme: dark) { .sub { color: #999; } }
+  h2 { font-size: 1.15rem; margin-top: 2.2rem; }
+  code { background: #f1f1f1; padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.9em; }
+  nav { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid #ddd; font-size: 0.92rem; }
+  @media (prefers-color-scheme: dark) { nav { border-color: #333; } }
+  ul { padding-left: 1.3rem; }
+  li { margin: 0.35rem 0; }
+</style>
+</head>
+<body>
+
+<h1>Workspace MCP Servers</h1>
+<p class="sub">Aplikasi OAuth pribadi untuk menghubungkan asisten AI dengan data Google Workspace milik pemiliknya sendiri.</p>
+
+<h2>Apa aplikasi ini</h2>
+<p>
+  <strong>Workspace MCP Servers</strong> adalah aplikasi OAuth pribadi yang dipakai oleh satu orang,
+  pemilik akun Google-nya sendiri. Aplikasi ini menghubungkan klien MCP (Model Context Protocol)
+  seperti Claude Code dengan data Google Workspace milik pemilik akun, lewat server MCP sumber terbuka
+  <a href="https://github.com/taylorwilsdon/google_workspace_mcp">workspace-mcp</a>.
+</p>
+<p>
+  Tujuannya sederhana: memungkinkan pemilik akun membaca dan mengelola email, berkas Drive, dokumen,
+  spreadsheet, dan kalender miliknya sendiri dari dalam editor kode, tanpa berpindah aplikasi.
+</p>
+
+<h2>Data yang diakses</h2>
+<p>Setelah pemilik akun memberi izin, aplikasi dapat mengakses:</p>
+<ul>
+  <li><strong>Gmail</strong> - membaca, mencari, menyusun draf, dan mengirim email atas nama pemilik akun</li>
+  <li><strong>Google Drive</strong> - membaca dan mengelola berkas milik pemilik akun</li>
+  <li><strong>Google Docs, Sheets, Slides</strong> - membaca dan menyunting dokumen milik pemilik akun</li>
+  <li><strong>Google Calendar</strong> - membaca dan mengelola acara kalender</li>
+  <li><strong>Google Forms, Tasks, Contacts, Chat</strong> - membaca dan mengelola data terkait</li>
+  <li><strong>Google Apps Script</strong> - mengelola proyek skrip milik pemilik akun</li>
+</ul>
+
+<h2>Bagaimana data disimpan</h2>
+<p>
+  Aplikasi ini berjalan sepenuhnya di komputer pemilik akun. Token OAuth disimpan sebagai berkas
+  JSON di folder lokal <code>~/.google_workspace_mcp/credentials/</code> pada mesin pemilik akun.
+</p>
+<p>
+  <strong>Tidak ada server milik pengembang.</strong> Tidak ada basis data pusat, tidak ada telemetri,
+  dan tidak ada data yang dikirim ke pihak ketiga. Data Google hanya bergerak antara akun Google
+  pemiliknya dan komputer pemiliknya sendiri.
+</p>
+
+<h2>Siapa yang memakai</h2>
+<p>
+  Aplikasi ini dipakai oleh satu orang saja, yaitu pemilik akun Google yang memberi izin.
+  Aplikasi tidak dibagikan, tidak dijual, dan tidak menerima pengguna lain.
+</p>
+
+<nav>
+  <a href="./privacy.html">Kebijakan Privasi</a> &nbsp;|&nbsp;
+  <a href="./terms.html">Syarat Layanan</a> &nbsp;|&nbsp;
+  Kontak: <a href="mailto:ahmdfauzan.znt@gmail.com">ahmdfauzan.znt@gmail.com</a>
+</nav>
+
+</body>
+</html>
