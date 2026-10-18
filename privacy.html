@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebijakan Privasi - Workspace MCP Servers</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+    line-height: 1.65; color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #141414; }
+    a { color: #8ab4f8; }
+    code { background: #262626; }
+  }
+  h1 { font-size: 1.7rem; line-height: 1.2; margin-bottom: 0.35rem; }
+  .sub { color: #666; margin-top: 0; }
+  @media (prefers-color-scheme: dark) { .sub { color: #999; } }
+  h2 { font-size: 1.1rem; margin-top: 2rem; }
+  code { background: #f1f1f1; padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.9em; }
+  nav { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid #ddd; font-size: 0.92rem; }
+  @media (prefers-color-scheme: dark) { nav { border-color: #333; } }
+  ul { padding-left: 1.3rem; }
+  li { margin: 0.35rem 0; }
+  .updated { font-size: 0.9rem; color: #666; }
+  @media (prefers-color-scheme: dark) { .updated { color: #999; } }
+</style>
+</head>
+<body>
+
+<h1>Kebijakan Privasi</h1>
+<p class="sub">Workspace MCP Servers</p>
+<p class="updated">Terakhir diperbarui: 18 Oktober 2026</p>
+
+<h2>1. Ruang lingkup</h2>
+<p>
+  Kebijakan ini menjelaskan bagaimana aplikasi OAuth pribadi <strong>Workspace MCP Servers</strong>
+  memperlakukan data yang diperoleh dari Google API. Aplikasi ini dipakai oleh satu orang,
+  yaitu pemilik akun Google yang memberikan izin.
+</p>
+
+<h2>2. Data yang diakses</h2>
+<p>Aplikasi mengakses data Google hanya setelah pemilik akun menyetujui izin secara eksplisit. Cakupannya meliputi:</p>
+<ul>
+  <li>Gmail: pesan, label, draf, dan pengaturan dasar</li>
+  <li>Google Drive: berkas dan metadata berkas</li>
+  <li>Google Docs, Sheets, Slides: isi dokumen</li>
+  <li>Google Calendar: kalender, acara, dan ketersediaan waktu</li>
+  <li>Google Forms, Tasks, Contacts, Chat: formulir, tugas, kontak, dan pesan</li>
+  <li>Google Apps Script: proyek skrip, deployment, dan metrik</li>
+  <li>Profil dasar: nama dan alamat email</li>
+</ul>
+
+<h2>3. Cara data digunakan</h2>
+<p>
+  Data hanya digunakan untuk menjalankan fungsi yang diminta pemilik akun dari dalam klien MCP,
+  misalnya membaca email, mencari berkas, atau membuat acara kalender. Data tidak dipakai untuk
+  periklanan, tidak dipakai untuk melatih model, dan tidak dipakai untuk tujuan lain di luar
+  permintaan pemilik akun.
+</p>
+
+<h2>4. Cara data disimpan</h2>
+<p>
+  Aplikasi berjalan sepenuhnya di komputer pemilik akun. Token OAuth dan data sesi disimpan sebagai
+  berkas lokal di <code>~/.google_workspace_mcp/credentials/</code> pada mesin tersebut.
+</p>
+<p>
+  <strong>Tidak ada server milik pengembang.</strong> Tidak ada basis data pusat, tidak ada telemetri,
+  dan tidak ada salinan data yang disimpan di tempat lain.
+</p>
+
+<h2>5. Berbagi data dengan pihak ketiga</h2>
+<p>
+  Data Google tidak dijual, tidak disewakan, dan tidak dibagikan kepada pihak ketiga mana pun.
+  Aplikasi tidak mengirim data ke layanan analitik, iklan, atau perantara data.
+</p>
+<p>
+  Pengecualian hanya berlaku bila diwajibkan hukum yang berlaku, atau untuk memenuhi kewajiban
+  keamanan yang sah.
+</p>
+
+<h2>6. Akses manusia</h2>
+<p>
+  Tidak ada orang lain yang membaca data Google pemilik akun. Pemilik akun adalah satu-satunya
+  pihak yang dapat mengakses mesin tempat data tersimpan.
+</p>
+
+<h2>7. Penyimpanan dan penghapusan</h2>
+<p>
+  Data tersimpan selama pemilik akun menghendaki. Pemilik akun dapat menghapus seluruh data kapan saja dengan:
+</p>
+<ul>
+  <li>menghapus berkas di <code>~/.google_workspace_mcp/credentials/</code>, dan</li>
+  <li>mencabut akses aplikasi di <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+</ul>
+<p>
+  Setelah akses dicabut, refresh token tidak berlaku lagi dan aplikasi tidak dapat mengakses data Google.
+</p>
+
+<h2>8. Kepatuhan pada Kebijakan Data Pengguna Google API</h2>
+<p>
+  Penggunaan data yang diterima aplikasi ini dari Google API akan mematuhi
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Kebijakan Data Pengguna Layanan API Google</a>,
+  termasuk persyaratan Penggunaan Terbatas (Limited Use).
+</p>
+<p>Secara khusus:</p>
+<ul>
+  <li>Data tidak ditransfer ke pihak ketiga, kecuali sejauh diperlukan untuk menyediakan atau meningkatkan fitur yang terlihat oleh pengguna, mematuhi hukum yang berlaku, atau sebagai bagian dari penggabungan atau akuisisi.</li>
+  <li>Data tidak digunakan untuk iklan, termasuk iklan yang dipersonalisasi.</li>
+  <li>Data tidak dibaca oleh manusia, kecuali pemilik akun memberi izin eksplisit untuk kasus tertentu, diperlukan untuk keamanan, atau diwajibkan hukum.</li>
+</ul>
+
+<h2>9. Keamanan</h2>
+<p>
+  Token disimpan di mesin lokal pemilik akun dan dilindungi oleh kontrol akses sistem operasi.
+  Aplikasi meminta cakupan izin seminimal mungkin yang dibutuhkan untuk fungsinya.
+</p>
+
+<h2>10. Perubahan kebijakan</h2>
+<p>
+  Perubahan pada kebijakan ini akan ditampilkan di halaman ini beserta tanggal pembaruannya.
+</p>
+
+<h2>11. Kontak</h2>
+<p>
+  Pertanyaan mengenai privasi dapat dikirim ke
+  <a href="mailto:ahmdfauzan.znt@gmail.com">ahmdfauzan.znt@gmail.com</a>.
+</p>
+
+<nav>
+  <a href="./index.html">Beranda</a> &nbsp;|&nbsp;
+  <a href="./terms.html">Syarat Layanan</a>
+</nav>
+
+</body>
+</html>
